@@ -1,4 +1,4 @@
-package com.example.flutter_opus
+package com.cj.flutter_opus
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
