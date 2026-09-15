@@ -6,7 +6,7 @@ A Flutter plugin for Opus audio codec encoding and decoding using FFI (Foreign F
 
 - ✅ Opus audio decoding
 - ✅ Opus audio encoding
-- ✅ iOS support with static library
+- ✅ iOS support through Swift Package Manager
 - ✅ macOS support with static library
 - ✅ Android support with shared library 
 - ✅ Pure Dart API using FFI
@@ -21,6 +21,12 @@ Add this to your package's `pubspec.yaml` file:
 dependencies:
   flutter_opus: ^latest
 ```
+
+The iOS implementation is integrated through Swift Package Manager. Recent
+Flutter projects with Swift Package Manager enabled automatically discover the
+package at `ios/flutter_opus/`; no Podfile or CocoaPods dependency is required.
+If needed, enable the Flutter integration once with
+`flutter config --enable-swift-package-manager`.
 
 ## Usage
 
@@ -67,7 +73,7 @@ print('Opus version: $version');
 
 ## Supported Platforms
 
-- ✅ iOS (with Opus static library)
+- ✅ iOS (with Opus XCFramework via Swift Package Manager)
 - ✅ Android (coming soon)
 - ❌ macOS (coming soon)
 - ❌ Windows (coming soon)
@@ -78,7 +84,7 @@ print('Opus version: $version');
 ### iOS
 
 - iOS 12.0 or later
-- Opus static library (`libopus.a`) compiled for iOS architectures
+- Opus XCFramework bundled with the plugin
 
 ### Android
 - Android 5.0 (API 21) or later
