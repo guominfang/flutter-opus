@@ -43,6 +43,8 @@ class OpusEncoder {
       return DynamicLibrary.open('libopus.so');
     } else if (Platform.isIOS) {
       return DynamicLibrary.process();
+    } else if (Platform.isMacOS) {
+      return DynamicLibrary.process();
     } else {
       throw UnsupportedError('Unsupported platform');
     }
